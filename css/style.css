@@ -83,39 +83,148 @@ zmieniając pozycję na inną niż static (statyczna), otrzymujemy dostęp do w�
 
 /*position fixed - pozwala na ustawienie elementu względem OKNA PRZEGLĄDARKI*/
 
-#main-nav{
+#main-nav {
     position: fixed;
     left: 0;
     top: 0;
     z-index: 1;
     width: 100%;
+    background-color: aqua;
 }
 
-#selektor-uniwersalny{
+#selektor-uniwersalny {
     margin-top: 90px;
 }
 
 /*jednostki miary*/
-#jednostki-miary{
-    font-size: 30px;    
+
+#jednostki-miary {
+    font-size: 30px;
 }
 
 #jednostki-miary div {
     background-color: aquamarine;
     margin: 10px 0;
-    
+
 }
 
-#piksele{
+#piksele {
     width: 400px;
 }
 
-#em{
+#em {
     width: 20em;
 }
 
-#procenty{
+#procenty {
     width: 50%;
-    
-    
+
+
+}
+
+#main-header {
+    height: 100vh;
+    background-color: beige;
+}
+
+/*Dla vh Pasek ma zazwyczaj 12px szerokości*/
+
+/*pseudoelementy*/
+
+#main-nav ul {
+    list-style: none;
+
+}
+
+#main-nav ul li::before {
+    font-family: FontAwesome;
+    content: "\f2dd";
+}
+
+#main-header h1 {
+    line-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+#main-header h1::before,
+#main-header h1::after {
+    content: '';
+    display: inline-block;
+    width: 20%;
+    border-top: 2px solid black;
+    position: absolute;
+    top: 50%;
+    color: black;
+}
+
+#main-header h1::before {
+    left: 10%;
+}
+
+#main-header h1::after {
+    right: 10%;
+}
+
+/*pseudoklasy - po akcji użytkownika, lub gdy maja okreslone miejsce w strukturze */
+
+#main-nav ul .list-item:first-child a {
+    color: red;
+}
+
+#main-nav ul .list-item:last-child a {
+    color: red;
+}
+
+/*hover kiedy myszka nad */
+
+#main-nav ul .list-item a:hover {
+    text-decoration: none;
+    color: violet;
+
+}
+input{
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 300px;
+    padding: 15px;
+    background-color: lightcoral;
+}
+form input:focus{
+    border: 5px solid red;
+}
+
+
+/* :visited -okresla sta odwiedzanego linka */
+#main-nav ul .list-item a:visited {
+    color: green;
+}
+
+/*nth-of*/
+/*nth-child, lapie dziecko o okreslonym selektroze tylko wtedy kiedy jest na okreslonym miejscu*/
+
+#dzieci p:nth-child(3){
+    background-color: aqua;
+}
+
+/*nth-of-type, lapie selektor o okreslonym typie*/
+/*zaczyna numerowanie elemetow od poczatku*/
+#dzieci p:nth-last-of-type(3){
+    background-color: blueviolet
+        
+}
+
+/*zacyzna numerowanie od poczatku*/
+#dzieci p:nth-of-type(5){
+    background-color: blueviolet
+}
+
+/*
+an + b:
+a - oznacza co ile elementow przeskakujemy
+b - oznacza od ktorego elementu zaczynamy*/
+#dzieci p:nth-of-type(3n + 1){
+    background-color: yellow;
 }
