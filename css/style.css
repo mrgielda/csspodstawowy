@@ -1,0 +1,96 @@
+/*kaskadowosc - stylr (do tego samego selektora - ze zgodną hierarchią) napisane póżniej, zastąpia styler zdefiniowane wcześniej*/
+
+/*selektor uniwersalny "*", łapie wszystkie e;e,emty na stronie*/
+
+* {
+    margin: 0;
+}
+
+/*selektor zniacznika - lapie wszystkie wystapienia danego znacznika na stronie */
+
+/*
+p {
+   margin: 5px;
+}
+*/
+
+/*selektor klasy "." łapie elementy z podana klasa */
+
+.green {
+    color: blue;
+}
+
+.blue {
+    color: green;
+}
+
+/*selektor łączony cechuje się tym, że nie podajemy spacji przy listowaniu atrybutów czy elementów (np. klas, id, atrybutów)*/
+
+.blue.green {
+    color: red;
+}
+
+/*pozycjonowanie 
+zmieniając pozycję na inną niż static (statyczna), otrzymujemy dostęp do właściwości top,left,right,bottom. Oznaczają one: "odsuń od kierunku o:" */
+
+.bgGreen {
+    background-color: green;
+    height: 400px;
+    color: #FFFFFF;
+    position: relative;
+
+}
+
+.bgRed {
+    background-color: red;
+    margin-bottom: 10px;
+
+    /*    pozycja relatywna, odsuwa element od krawedzi top,left,right,bottom o podaną jednostkę względem miejsca, w którym by się znajdował*/
+    /*    pozycjonowanie absolutne odbywa się względem elementu rodzica, ktory jest w pozycji relatywnej (jezeli nie ma takiego elementu, to ustawia sie wzgledem elementu body). ustawiajac pozycje abstolutna, mimo ze jest to element blokowy (display: block), element dostosowuje sie do contentu*/
+    position: absolute;
+    top: 60px;
+    left: 30px;
+
+}
+
+
+.bgBlue {
+    background-color: blue;
+}
+
+/*relatywna w relatywnej*/
+
+/*grupowanie selektorow - po przecinku "," */
+
+.relative,
+.relative-inner {
+    position: relative
+}
+
+.relative {
+    background-color: yellow;
+    height: 400px;
+
+}
+
+.relative-inner {
+    background-color: pink;
+    height: 50%;
+    width: 50%;
+    top: 100px;
+    left: 25%;
+}
+
+/*position fixed - pozwala na ustawienie elementu względem OKNA PRZEGLĄDARKI*/
+
+#main-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#selektor-uniwersalny{
+    margin-top: 90px;
+}
