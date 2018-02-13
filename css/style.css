@@ -94,3 +94,28 @@ zmieniając pozycję na inną niż static (statyczna), otrzymujemy dostęp do w�
 #selektor-uniwersalny{
     margin-top: 90px;
 }
+
+/*jednostki miary*/
+#jednostki-miary{
+    font-size: 30px;    
+}
+
+#jednostki-miary div {
+    background-color: aquamarine;
+    margin: 10px 0;
+    
+}
+
+#piksele{
+    width: 400px;
+}
+
+#em{
+    width: 20em;
+}
+
+#procenty{
+    width: 50%;
+    
+    
+}
