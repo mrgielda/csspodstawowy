@@ -228,3 +228,36 @@ b - oznacza od ktorego elementu zaczynamy*/
 #dzieci p:nth-of-type(3n + 1){
     background-color: yellow;
 }
+
+/*selektory atrybutów */
+/*podajemy w nawiasach kwadratowych - po nazwie atrybutu*/
+
+#selektory-atrybutow input[type]{
+    border: 5px solid blue;
+}
+
+/*po okreslonej wartosci atrybutu*/
+#selektory-atrybutow input[title="opis"]{
+    border: 5px solid red;
+}
+
+/*Jeżeli zawiera w sobie string. String musi byc podany jako CAŁA WARTOŚĆ*/
+#selektory-atrybutow input[title~="pierwszy"]{
+    border: 5px solid black;
+}
+
+/*jeżeli zawiera w sobie określony ciąg znaków*/
+#selektory-atrybutow input[title*="dru"]{
+    border: 5px solid pink;
+}
+
+/*zaczynajace sie od okreslonego ciagu znakow*/
+#selektory-atrybutow input[title^="op"]{
+    border: 5px solid red;
+}
+
+/*konczące sie okreslonym ciagiem znakow*/
+#selektory-atrybutow input[title$="gi"]{
+    border: 5px solid green;
+}
+
